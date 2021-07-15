@@ -1,6 +1,7 @@
-//import Navbar from 'react-bootstrap/Navbar';
-//import Nav from 'react-bootstrap/Nav';
-import {Navbar, Nav} from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import CartWidget from './CartWidget';
+//import {Navbar, Nav} from 'react-bootstrap';
 
 function TopNav() {
     return (
@@ -25,11 +26,13 @@ function TopNav() {
                         <Nav.Link eventKey={2} href="#memes">
                             Dank memes
                         </Nav.Link>
+                        <Nav.Link href="/#"><CartWidget/></Nav.Link>
                     </Nav>
+                        
                 </Navbar.Collapse>
             </Navbar>
         </div>
     )
 }
 
-export default TopNav
+export default TopNav;
