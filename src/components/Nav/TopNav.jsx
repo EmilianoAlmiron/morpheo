@@ -22,10 +22,10 @@ function TopNav() {
                         </NavDropdown>*/}
                     </Nav>
                     <Nav>
-                        <Nav.Link href="#deets">More deets</Nav.Link>
+                        {/*<Nav.Link href="#deets">Lo Mas Vendido</Nav.Link>
                         <Nav.Link eventKey={2} href="#memes">
                             Dank memes
-                        </Nav.Link>
+                        </Nav.Link>*/}
                         <Nav.Link href="/#"><CartWidget/></Nav.Link>
                     </Nav>
                         

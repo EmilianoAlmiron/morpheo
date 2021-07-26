@@ -1,6 +1,6 @@
 import React from 'react'
-import ItemCount from './ItemCount'
-import ItemList from './ItemList'
+import ItemCount from '../Items/ItemCount'
+import ItemList from '../ItemList/ItemList'
 
 const handleCount=(cant)=>{
     alert('Vas a comprar: ' + cant)
