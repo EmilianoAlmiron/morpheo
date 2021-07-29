@@ -46,7 +46,7 @@ function ItemList(props) {
                             <Card.Text>
                                {item.categoria}
                             </Card.Text>
-                            <Link to={`/detalle/${props.id}`} variant="primary">queres saber mas?</Link>
+                            <Link to={`/detalle/${item.id}`} variant="primary">queres saber mas?</Link>
                         </Card.Body>
                     </Card>
                 )} 
