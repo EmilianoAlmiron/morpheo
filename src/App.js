@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemLisContainer/ItemListContainer';
@@ -6,12 +7,20 @@ import TopNav from './components/Nav/TopNav';
 
 function App() {
   return (
-    <div className="App">
-      <TopNav/>
-      <ItemListContainer greeting='Bienvenidos a la mejor tienda de Vapeo' user='MORPHEO'/>
-      <ItemDetailContainer/>
-      
-    </div>
+    <Router>
+      <TopNav />
+        <Switch>
+          <div className="App">
+            <Route exact path="/">
+              <ItemListContainer />
+            </Route>
+            <Route exact path="/category/:categoryId">
+              <ItemListContainer />
+            </Route>
+            <Route exact path="/detalle/:detallesId"  component={ItemDetailContainer} />
+          </div>
+        </Switch>
+    </Router>
   );
 }
 
