@@ -31,14 +31,14 @@ const ItemDetail = () => {
         <div>
             {item.map((it) => (
                     <Card style={{ width: '18rem' }} key={item.id}>
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card.Img variant="top" src={it.img} />
                         <Card.Body>
                             <Card.Title>{it.nombre}</Card.Title>
                         </Card.Body>
                         <p>DETALLES:{it.detalle}</p>
+                        <ItemCount stock={10} initial={1} onAdd={handleCount}/>
                     </Card>
             ))} 
-            <ItemCount stock={10} initial={1} onAdd={handleCount}/>
         </div>
     )
 }

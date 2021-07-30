@@ -35,7 +35,7 @@ function ItemList(props) {
         <div>
             {itemList.map((item) => (
                 <Card style={{ width: '18rem' }} key={item.id}>
-                    <Item nombre={item.nombre} categoria={item.category} id={item.id} />
+                    <Item nombre={item.nombre} categoria={item.category} id={item.id} img={item.img} />
                 </Card>
             ))}
         </div>
