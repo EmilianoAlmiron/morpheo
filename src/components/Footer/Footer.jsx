@@ -11,8 +11,8 @@ function footer() {
                     <section className="footer__columnas">
                         <div className="footer__empresas">
                             <h3>Empresa</h3>
-                            <p>Somos una empresa dedicada a la representación y distribución de marcas profesionales para el cuidado del cabello y la belleza.
-                                Llegamos con nuestros asesores/vendedores a cada rincón de la Provincia de Córdoba desde hace más de 20 años.
+                            <p> Esta empresa se creó para ayudar a las personas a terminar con el vicio del cigarrillo, creamos una gran variedad de sabores, para toda clase de clientes.
+                                Empezamos hace más de 5 años y seguimos agregamos más sabores en nuestras filas.
                             </p>
                         </div>
                     </section>
@@ -21,7 +21,7 @@ function footer() {
                             <h3>Contactanos</h3>
                             <ul>
                                 <li><a>Telefono Fijo:4932124</a></li>
-                                <li><a>Celular:(0351)153731600</a></li>
+                                <li><a>Celular:(0351)156512571</a></li>
                                 <li><a href="almironemiliano@gmail.com">gmail</a></li>
                                 <li>Direccion: Carmen de patagones 2282</li>
                                 <li>Horarios: Lunes a Viernes de 9 a 20hs</li>
