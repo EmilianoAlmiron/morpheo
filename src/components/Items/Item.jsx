@@ -7,7 +7,7 @@ function Item({ nombre, categoria, id, img }) {
     return (
     <>
       <Card.Body>
-      <Card.Img src={img} variant="top" />
+      <Card.Img src={img} />
         <Card.Title>{nombre}</Card.Title>
         <Card.Text>{categoria}</Card.Text>
         <Link to={`/detalle/${id}`} variant="primary">

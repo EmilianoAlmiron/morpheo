@@ -30,7 +30,7 @@ function TopNav() {
                 <Nav.Link className="mi-carrito" href="/#"><CartWidget /></Nav.Link>
             </Nav>
             <div>
-                <h1>...MORPHEO... Liquidos de Vapeo!!!!</h1>
+                <h1 className="h1">...MORPHEO... Liquidos de Vapeo!!!!</h1>
 
             </div>
         </div>

@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 import { getItems } from './getItems'
 import { useParams } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
+import style from './card_detalle.css'
 
 const handleCount=(cant)=>{
     alert('Vas a comprar: ' + cant)
@@ -30,7 +31,7 @@ const ItemDetail = () => {
     return (
         <div>
             {item.map((it) => (
-                    <Card style={{ width: '18rem' }} key={item.id}>
+                    <Card className="card_detalles" key={item.id}>
                         <Card.Img variant="top" src={it.img} />
                         <Card.Body>
                             <Card.Title>{it.nombre}</Card.Title>
