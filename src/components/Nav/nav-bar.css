@@ -1,6 +1,7 @@
 .mi-nav{
-    background: rgb(119,130,228);
-    background: linear-gradient(90deg, rgba(119,130,228,0.8519782913165266) 0%, rgba(159,224,190,0.6166841736694677) 45%, rgba(56,0,0,1) 100%);
+    background: rgb(241,14,14);
+background: linear-gradient(90deg, rgba(241,14,14,0.7063200280112045) 0%, rgba(9,7,7,0.908000700280112) 100%);
+
 }
 .baner{
     width: 100%;
@@ -8,5 +9,5 @@
 }
 .h1{
     text-align: center;
-    background-color: rgb(180, 181, 225);
+    background-color: rgba(246, 0, 41, 0.616);
 }

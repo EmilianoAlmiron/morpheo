@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react'
 import { getItems } from './getItems'
 import { useParams } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
-import style from './card_detalle.css'
+import './card_detalle.css'
 
 const handleCount=(cant)=>{
     alert('Vas a comprar: ' + cant)

@@ -1,6 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import { NavLink } from 'react-router-dom';
-import style from './nav-bar.css';
+import './nav-bar.css';
 import CartWidget from './CartWidget';
 import Baner from '../imagenes/DSC_0321.jpg'
 //import {Navbar, Nav} from 'react-bootstrap';

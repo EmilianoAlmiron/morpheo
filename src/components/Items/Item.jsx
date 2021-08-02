@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-
+import '../Items/Item.css';
 
 function Item({ nombre, categoria, id, img }) {
     return (
