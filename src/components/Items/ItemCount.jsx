@@ -1,9 +1,12 @@
 import React, {useState} from 'react'
 import './Item.css'
+import { Link } from 'react-router-dom'
 
 
 function ItemCount({initial, stock, onAdd}) {
     const [cantidad, setCantidad] = useState(initial)
+    const [pulsado, setPulsado] = useState(false)
+
     const handleAdd=()=>{
         if (cantidad<stock) {
             setCantidad(cantidad+1)
@@ -16,6 +19,7 @@ function ItemCount({initial, stock, onAdd}) {
     }
     const handleOnAdd=()=>{
         onAdd(cantidad)
+        setPulsado(true)
     }
     
     return (
@@ -34,9 +38,13 @@ function ItemCount({initial, stock, onAdd}) {
                     <button onClick={handleAdd}>
                         +
                     </button>
+                    { pulsado ?  
+                        <Link to={`/cart`} className="btn btn-danger btn-block btnCards_btn">Terminar compras</Link>
+                    ://else  
                     <button className="btn btn-primary btn-block btnCards_btn" onClick={handleOnAdd}>
                         Agregar al Carrito 
                     </button>
+                    }
                 </div>
             </div>
         </>

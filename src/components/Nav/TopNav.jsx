@@ -22,10 +22,10 @@ function TopNav() {
                     <NavLink to="/category/frutales" eventKey="link-3">Frutales</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-4">Instagram</Nav.Link>
+                    <Nav.Link eventKey="link-4">Saber de nosotros!!!</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="link-5">Cars</Nav.Link>
+                    <Nav.Link eventKey="link-5">Cart</Nav.Link>
                 </Nav.Item>
                 <Nav.Link className="mi-carrito" href="/#"><CartWidget /></Nav.Link>
             </Nav>
