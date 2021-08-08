@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import './Item.css'
 import { Link } from 'react-router-dom'
 
 

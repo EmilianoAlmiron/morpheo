@@ -1,18 +1,65 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 import ItemList from './ItemList'
+import { getMocksItems } from '../ItemDetailContainer/getMocks' 
+
+import Spinner from 'react-bootstrap/Spinner'
 
 
-const ItemListContainer = (props) => {
-    const{greeting, user}= props
+const handleCount=(cant)=>{
+    alert(`ud a agregado : ${cant}`)
+}
 
+
+function ItemListContainer() { 
+    const [items, setItems] = useState([])//estado 
+    const [loading, setLoading] = useState(true)
+    const { categoryId } = useParams()
+    const user = false
+
+    useEffect(() => {
+        // fetch('https://pokeapi.co/api/v2/pokemon/')
+        // .then(data=> data.json())
+        // .then(res => setPokeList(res.results))//array  
+        if(categoryId===undefined){
+            getMocksItems()
+            .then(resp=>{ 
+                setItems(resp)                
+                setLoading(false)
+            })
+        }else{
+            getMocksItems()
+            .then(resp=> setItems(resp.filter(it => it.categoria===categoryId)))
+        }
+    }, [categoryId])
+
+    if(user){
+        return <h1>Login</h1>
+    }
+
+
+    console.log(categoryId);
     return (
-
         <div>
-            <ItemList/>
-        </div>
+
+        { loading ? 
+                <center>
+                    <Spinner animation="border" role="status" className="mt-5">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>                    
+                </center>
+            : 
+                <ItemList items={items} />
+        }
+         
+         
+          {/* <ItemCount /> */}
+
+        
+         </div>
+        
+        
     )
 }
 
 export default ItemListContainer
-
-

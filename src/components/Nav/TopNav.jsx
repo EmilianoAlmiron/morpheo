@@ -1,34 +1,30 @@
-import Nav from 'react-bootstrap/Nav';
-import { NavLink } from 'react-router-dom';
-import './nav-bar.css';
+import { NavLink, Link } from 'react-router-dom';
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 import CartWidget from './CartWidget';
 import Baner from '../imagenes/DSC_0321.jpg'
+import './nav-bar.css';
+
 //import {Navbar, Nav} from 'react-bootstrap';
 
-function TopNav() {
+const NavBar=() => {
     return (
         <div>
             <div>
                 <img src={Baner} className="baner" />
             </div>
-            <Nav className="mi-nav" fill variant="tabs" defaultActiveKey="/home">
-                <Nav.Item>
-                    <NavLink to="/" eventKey="link-1">INICIO</NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                    <NavLink to="/category/tabaco" eventKey="link-2">Tabaco</NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                    <NavLink to="/category/frutales" eventKey="link-3">Frutales</NavLink>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-4">Saber de nosotros!!!</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-5">Cart</Nav.Link>
-                </Nav.Item>
-                <Nav.Link className="mi-carrito" href="/#"><CartWidget /></Nav.Link>
-            </Nav>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Link className="btn btn-outline-primary" to="/">INICIO</Link>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                        <NavLink to="/category/tabaco" className="btn btn-outline-primary">Tabaco</NavLink>
+                        <NavLink to="/category/frutales" className="btn btn-outline-primary">Frutales</NavLink>
+                        <Nav.Link to="/cart" className="btn btn-outline-primary">Cart</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+                <CartWidget />
+            </Navbar>
             <div>
                 <h1 className="h1">...MORPHEO... Liquidos de Vapeo!!!!</h1>
 
@@ -37,4 +33,4 @@ function TopNav() {
     )
 }
 
-export default TopNav;
+export default NavBar;
