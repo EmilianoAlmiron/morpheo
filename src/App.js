@@ -22,7 +22,7 @@ function App() {
             <Route exact path="/category/:categoryId">
               <ItemListContainer />
             </Route>
-            <Route exact path="/detalle/:detallesId" component={ItemDetailContainer} />
+            <Route exact path="/detalle/:id" component={ItemDetailContainer} />
             <Route exact path="/cart">
               <Cart />
             </Route>

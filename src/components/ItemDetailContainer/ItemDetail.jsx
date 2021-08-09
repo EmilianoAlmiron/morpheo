@@ -5,9 +5,11 @@ import './card_detalle.css'
 import Detail from './Detail' 
 import {NotiContext} from '../context/CartContext'
 
-function ItemDetail({item={}}) {
+function ItemDetail({item, id}) {
     const [cantidad, setCantidad] = useState(0)
     const [pulsar, setPulsar] = useState(false)
+
+    item = item.filter(el => el.id === id.id)
 
     const {cartList, guardarItem} = useContext(NotiContext)
 
@@ -16,13 +18,11 @@ function ItemDetail({item={}}) {
         guardarItem({item: item,quantity: count})
     }
 
-    console.log(cartList)
     return (
         <div className="row">
 
              <Detail item={item} className="w-50" />
              <ItemCount onAdd={onAdd} initial={1} stock={6}/>
-             {/* { pulsar && <button className="btn btn-success btn-block">IR A CART</button> }  */}
         </div>
     )
 }

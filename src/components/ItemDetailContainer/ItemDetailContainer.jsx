@@ -4,20 +4,19 @@ import ItemDetail from './ItemDetail'
 import { getMocks } from './getMocks' 
 
 
-function ItemDetailContainer() {
+function ItemDetailContainer({match}) {
     const [item, setItem] = useState([])
 
-    const {id} = useParams()
+    const id = useParams()
 
     useEffect(() => {
       getMocks()
        .then(resp => setItem(resp))
     }, [])
 
-    console.log(id);
     return (
         <>
-          <ItemDetail item={item}/>  
+          <ItemDetail item={item} id={id}/>  
         </>
     )
 }

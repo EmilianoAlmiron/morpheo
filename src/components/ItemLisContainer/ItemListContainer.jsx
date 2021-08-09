@@ -2,14 +2,11 @@ import {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import ItemList from './ItemList'
 import { getMocksItems } from '../ItemDetailContainer/getMocks' 
-
 import Spinner from 'react-bootstrap/Spinner'
-
 
 const handleCount=(cant)=>{
     alert(`ud a agregado : ${cant}`)
 }
-
 
 function ItemListContainer() { 
     const [items, setItems] = useState([])//estado 
@@ -37,8 +34,6 @@ function ItemListContainer() {
         return <h1>Login</h1>
     }
 
-
-    console.log(categoryId);
     return (
         <div>
 

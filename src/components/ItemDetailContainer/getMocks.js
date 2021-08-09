@@ -70,7 +70,7 @@ const item={
 
 const task = new Promise((res)=>{
     
-    res(item)
+    res(items)
 })
 
 export const getMocks=()=>{
