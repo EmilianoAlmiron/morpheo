@@ -10,16 +10,15 @@ const handleCount=(cant)=>{
 
 function ItemListContainer() { 
     const [items, setItems] = useState([])//estado 
-    const [loading, setLoading] = useState(true)
+    //const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
-    const user = false
 
     useEffect(() => { 
         if(categoryId === undefined){
             getMocksItems()
             .then(resp=>{ 
                 setItems(resp)                
-                setLoading(false)
+                //setLoading(false)
             })
         }else{
             getMocksItems()
@@ -27,20 +26,17 @@ function ItemListContainer() {
         }
     }, [categoryId])
 
-    if(user){
-        return <h1>Login</h1>
-    }
 
     return (
         <div>
 
-        { loading ? 
+        {/*{ loading ? 
                 <center>
                     <Spinner animation="border" role="status" className="mt-5">
                         <span className="visually-hidden"></span>
                     </Spinner>                    
                 </center>
-            : 
+            : */
                 <ItemList items={items} />
         }
          </div>

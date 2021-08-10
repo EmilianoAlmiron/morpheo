@@ -11,7 +11,8 @@ const items=[{
     category:'tabaco',
     detalle:'Rico sabor a tabaco americano',
     ml:'120ml',
-    img:sisifo
+    img:sisifo,
+    precio:"$1450"
 },
 { 
     id: '0002', 
@@ -19,7 +20,8 @@ const items=[{
     category:'tabaco',
     detalle:'El mejor tabaco de todos, con un toque de galletita junto a un tostado caracteristico del tabaco acaramelado.',
     ml:'120ml',
-    img:tribeka
+    img:tribeka,
+    precio:"$1450"
 },
 { 
     id: '0003', 
@@ -27,7 +29,8 @@ const items=[{
     category:'frutales',
     detalle:'El exelente sabor a arandanos, frutilla y menta, no te quedes sin probarlo.',
     ml:'120ml',
-    img:degel
+    img:degel,
+    precio:"$1450"
 },
 { 
     id: '0004', 
@@ -35,7 +38,8 @@ const items=[{
     category:'frutales',
     detalle:'Que mas decir!!!! Frutilla con crema.....para usarlo todos los dias.',
     ml:'120ml',
-    img:unity
+    img:unity,
+    precio:"$1450"
 },
 { 
     id: '0005', 
@@ -43,7 +47,8 @@ const items=[{
     category:'frutales',
     detalle:'Lima Limon, o como todos le dicen Sprite...Resfrescante....',
     ml:'120ml',
-    img:manigoldo
+    img:manigoldo,
+    precio:"$1450"
 }, 
 ]
 

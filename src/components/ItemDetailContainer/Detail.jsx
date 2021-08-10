@@ -10,6 +10,7 @@ function Detail({ item }) {
                         <h3>Nombre:{el.nombre}</h3>
                         <h3>Tamaño: {el.ml}</h3>
                         <h3>Descripcion:{el.detalle} </h3>
+                        <h3>Precio:{el.precio} </h3>
 
                     </div>
                 })

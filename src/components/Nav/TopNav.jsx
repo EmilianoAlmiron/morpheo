@@ -5,6 +5,7 @@ import CartWidget from './CartWidget';
 import Baner from '../imagenes/DSC_0321.jpg'
 import './nav-bar.css';
 
+
 //import {Navbar, Nav} from 'react-bootstrap';
 
 const NavBar=() => {

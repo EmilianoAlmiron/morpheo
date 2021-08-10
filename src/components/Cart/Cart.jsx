@@ -2,20 +2,23 @@ import React, { useContext } from 'react'
 import { LiquidosContext } from '../context/CartContext'
 
 function Carrito() {
-    const { cartList, guardarItem, prince, size } = useContext(LiquidosContext)
+    const { cartList, guardarItem, price, size, removeItem, cleanList } = useContext(LiquidosContext)
     console.log(cartList)
-    console.log(size())
+    console.log(price())
 
     return (
         <>
             {cartList.map(item => (
-                <>
-                    <div className="row" key={item.item.id}>
-                        <p className="col">{item.item.nombre}</p>
+                
+                    <div className="row" key={item.item.id} >
+                        <p className="col">{item.item[0].nombre}</p>
                         <p className="col">{item.quantity}</p>
-                        <p className="col">{item.item.category}</p>
+                        <p className="col">{item.item[0].category}</p>
+                        <p className="col">{item.item[0].precio}</p>
+                        <button className="col" onClick={removeItem}>X</button>
+                        <button className="col" onClick={cleanList}>eliminar todo</button>
                     </div>
-                </>
+                
             ))}
         </>
     )

@@ -37,7 +37,8 @@ export default function UseLiquidosContext({children}){
             removeItem,
             price,
             size,
-            guardarItem
+            guardarItem,
+            cleanList
         }}>
             {children}
         </LiquidosContext.Provider>
