@@ -5,31 +5,32 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemLisContainer/ItemListContainer';
 import TopNav from './components/Nav/TopNav';
 import Footer from './components/Footer/Footer';
-import Cart from './components/Cart/Cart';
-import UseNotiContext from './components/context/CartContext';
+import Carrito from './components/Cart/Cart';
+import UseLiquidosContext from './components/context/CartContext';
 
 
 function App() {
   return (
     <Router>
-      <UseNotiContext>
+      <UseLiquidosContext>
         <TopNav />
-        <Switch>
           <div className="App">
-            <Route exact path="/">
-              <ItemListContainer />
-            </Route>
-            <Route exact path="/category/:categoryId">
-              <ItemListContainer />
-            </Route>
-            <Route exact path="/detalle/:id" component={ItemDetailContainer} />
-            <Route exact path="/cart">
-              <Cart />
-            </Route>
+            <Switch>
+              <Route exact path="/detalle/:id" component={ItemDetailContainer} />
+
+              <Route exact path="/">
+                <ItemListContainer />
+              </Route>
+              <Route exact path="/category/:categoryId">
+                <ItemListContainer />
+              </Route>
+              <Route exact path="/cart">
+                <Carrito />
+              </Route>
+            </Switch>
           </div>
-        </Switch>
-        <Footer />
-      </UseNotiContext>
+          <Footer />
+      </UseLiquidosContext>
     </Router>
   );
 }

@@ -1,25 +1,23 @@
 import React, { useContext } from 'react'
-import { NotiContext } from '../context/CartContext'
+import { LiquidosContext } from '../context/CartContext'
 
-function Cart() {
-    const {cartList, guardarItem, prince, size} = useContext(NotiContext)
+function Carrito() {
+    const { cartList, guardarItem, prince, size } = useContext(LiquidosContext)
     console.log(cartList)
-    console.log(prince())
     console.log(size())
 
-    return  (
+    return (
         <>
-           {cartList.map(item =>(
-               <>
-                <div className="row" key={item.item.id}> 
-                    <p className="col">{item.item.nombre}</p>  
-                    <p className="col">{item.quantity}</p>  
-                    <p className="col">{item.item.precio}</p>  
-                </div>
-                <hr/>
+            {cartList.map(item => (
+                <>
+                    <div className="row" key={item.item.id}>
+                        <p className="col">{item.item.nombre}</p>
+                        <p className="col">{item.quantity}</p>
+                        <p className="col">{item.item.category}</p>
+                    </div>
                 </>
             ))}
         </>
     )
 }
-export default Cart
+export default Carrito

@@ -59,15 +59,6 @@ export const getMocksItems=()=>{
     )
 }
 
-const item={
-    id: '0002', 
-    nombre: 'Tribeka', 
-    category:'tabaco',
-    detalle:'El mejor tabaco de todos, con un toque de galletita junto a un tostado caracteristico del tabaco acaramelado.',
-    ml:'120ml',
-    img:tribeka
-}
-
 const task = new Promise((res)=>{
     
     res(items)

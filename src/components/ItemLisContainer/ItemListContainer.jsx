@@ -14,11 +14,8 @@ function ItemListContainer() {
     const { categoryId } = useParams()
     const user = false
 
-    useEffect(() => {
-        // fetch('https://pokeapi.co/api/v2/pokemon/')
-        // .then(data=> data.json())
-        // .then(res => setPokeList(res.results))//array  
-        if(categoryId===undefined){
+    useEffect(() => { 
+        if(categoryId === undefined){
             getMocksItems()
             .then(resp=>{ 
                 setItems(resp)                
@@ -26,7 +23,7 @@ function ItemListContainer() {
             })
         }else{
             getMocksItems()
-            .then(resp=> setItems(resp.filter(it => it.categoria===categoryId)))
+            .then(resp=> setItems(resp.filter(it => it.category === categoryId)))
         }
     }, [categoryId])
 
@@ -40,17 +37,12 @@ function ItemListContainer() {
         { loading ? 
                 <center>
                     <Spinner animation="border" role="status" className="mt-5">
-                        <span className="visually-hidden">Loading...</span>
+                        <span className="visually-hidden"></span>
                     </Spinner>                    
                 </center>
             : 
                 <ItemList items={items} />
         }
-         
-         
-          {/* <ItemCount /> */}
-
-        
          </div>
         
         

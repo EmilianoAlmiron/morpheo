@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import {useState, useContext} from 'react'
 import './card_detalle.css'
 import Detail from './Detail' 
-import {NotiContext} from '../context/CartContext'
+import {LiquidosContext} from '../context/CartContext'
 
 function ItemDetail({item, id}) {
     const [cantidad, setCantidad] = useState(0)
@@ -11,7 +11,7 @@ function ItemDetail({item, id}) {
 
     item = item.filter(el => el.id === id.id)
 
-    const {cartList, guardarItem} = useContext(NotiContext)
+    const { guardarItem} = useContext(LiquidosContext)
 
     function onAdd(count) {
         setCantidad(count)
