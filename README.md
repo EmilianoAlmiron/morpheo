@@ -1,10 +1,18 @@
-Instalamos librerias como:
+## :bookmark_tabs: Introduction 
+- Aplicación de una sola página con capacidad de respuesta móvil.
+- Tienda de comercio electrónico (frontend lista).
 
-Boostrap
-npm install boostrap
 
-React
-npm install react
+## :technologist: Concepts/Tech Stack Used
+- API de enlaces y contexto para la gestión de estados.
+- React-Router para enrutamiento.
+- JSON para consumir datos (API falsa) del archivo json.
+- Hooks y expresiones regulares para la validación de formularios del lado del cliente.
+- SASS(SCSS syntax) para estilizar.
 
-react-router-dom
-npm install react-router-dom
+## :desktop_computer: Setup:
+- Instale todas las dependencias del proyecto con ```npm install```
+- Inicie el servidor de desarrollo con ```npm start```
+- Open [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
+
+Nota: Este proyecto se inició con [Create React App](https://github.com/facebook/create-react-app).
